@@ -2,7 +2,19 @@ README:
 
 
 Demonstration Video: 
-https://drive.google.com/file/d/1aHxe3S_4XcNtChycDttElzC7M0KMHF8A/view?usp=sharing
+https://drive.google.com/file/d/1rbYhoUk3tzXRsQAmSzQvwqjc4Dej8ubF/view?usp=sharing
+
+Tech Stack:
+Java 14
+HTML
+CSS
+Javascript
+Apache Tomcat v9.0.8
+MySQL v8
+JDBC v8
+JSTL v2
+Gson v2.8.6
+OkHttp v4.8.0
 
 
 
@@ -18,3 +30,13 @@ There may be a weird bug in Eclipse where it says there is an error in index.jsp
 
 
 Run the code by running index.jsp in eclipse.
+
+
+
+
+
+Client ID
+YWWDqwccD6MIYqsqt4qv3Q
+
+API Key
+2RWbycKHLQ0LlnRD2POew2OQKTDsz5aEnsvKEvibSfzwsiVEvcUFalrt_QEFWn86GIyRKROj78KIq2DsiwpN7tVJhuzIFBjifjL_9WE22cWSTcdD3sYY2FW0U7pMYnYx

@@ -9,7 +9,7 @@
     <title>Search</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
      <script src="https://kit.fontawesome.com/3204349982.js" crossorigin="anonymous"></script>
@@ -49,73 +49,81 @@
 	}
 		
 	String keyword = (String)request.getAttribute("keyword");
-	String searchtype = (String)request.getAttribute("searchtype");
+	
 	String sortby = (String) request.getAttribute("sortby");
+	if (sortby.equals("review_count")) {
+		sortby = "review count";
+	} else if (sortby.equals("best_match")) {
+		sortby = "best match";
+	}
 	
 	// because tomcat does not allow spaces in cookies, replace the +'s with spaces that'
 	// were used as placeholders
 	UsersName = UsersName.replace("+", " ");
+
 	
+
 	if (loggedin.contentEquals("false")) { %>
-	<div style="position: absolute; top: 23px; right: 100px;">
-		<a href="index.jsp" style=" color: #AFAFAF; margin-top: 15px; font-size: 20px;">Home </a>
-		<a href="auth.jsp"  style=" color: #AFAFAF ; margin-top: 15px; margin-left: 15px; font-size: 20px;">Login / Register</a>	
-	</div>
-<% } else { %>	
-	<div style = "position: absolute; top: 23px; left: 230px; font-size: 20px; color: #AFAFAF;">       
-		<% out.println("Hi, " + UsersName + "!");  %>
-		
-	</div>
-	<div style="position: absolute; top: 23px; right: 100px;">
-		<a href="index.jsp" style=" color: #AFAFAF;font-size: 20px;">Home </a>
-		<!--<a href="index.jsp"  style=" margin-left: 15px; color: #AFAFAF;font-size: 20px;" 	>Logout</a> > -->
-		<%if (GEmail.contentEquals("")) {%> 
-			<a href="LogoutDispatcher"  style=" margin-left: 15px; color: #AFAFAF;font-size: 20px;" >Logout</a>
+		<div style="position: absolute; top: 23px; right: 100px;">
+			<a href="index.jsp" style=" color: black; margin-top: 15px; font-size: 20px;">Home </a>
+			<a href="auth.jsp"  style=" color: black ; margin-top: 15px; margin-left: 15px; font-size: 20px;">Login / Register</a>	
+		</div>
+	<% } else { %>	
+		<div style = "position: absolute; top: 28px; left: 335px; font-size: 20px; color: black;">       
+			<% out.println("Hi, " + UsersName + "!");  %>
+		</div>
+		<div style="position: absolute; top: 23px; right: 100px;">
+			<a href="index.jsp" style=" color: black;font-size: 20px;">Home </a>
+			<!--<a href="index.jsp"  style=" margin-left: 15px; color: #AFAFAF;font-size: 20px;" 	>Logout</a> > -->
+			
+			<%if (GEmail.contentEquals("")) {%> 
+				<a href="LogoutDispatcher"  style="margin-left: 15px; color: black;font-size: 20px;" >Logout</a>
 	 		
- 		<%} else {%>
- 			<a href="#" onclick = "glogout(); return false;"  style=" margin-left: 15px; color: #AFAFAF;font-size: 20px;" >Logout</a>
+	 		<%} else {%>
+	 			<a href="#" onclick = "glogout(); return false;"  style=" margin-left: 15px; color: black;font-size: 20px;" >Logout</a>
 	 		
 	 	
- 		<%} %>
- 	</div>
-<% } %>	
+	 		<%} %>
+	 	</div>
+	<% } %>	
 	<div style = "position: absolute; top: 14px; left: 80px;">       
-	<a href="index.jsp"   style="font-family: Lobster, cursive;margin-top: 15px;  color: #dd0808; font-size:33px;">SalEats! </a>
+		<a href="index.jsp"   style="font-family: Beau Rivage, cursive;margin-top: 15px;  color: #dd0808; font-size:38px;">Albright's Eats </a>
 	</div>
-	<hr size="1" width="100%" style="color: #af0606; margin-top: 80px" />
+	<hr  style="height: 2px; background-color: red; margin-top: 80px" />
 
 	<div class=" mx-auto " style="width: 90%" >
 	 
 		<form name="restaurantInfo" action="SearchDispatcher" method="GET">
 			<div class="row my-4">
 				
-		 		<select name = "Rn_or_Cat" class="form-select" style = width:10% >
-						<option selected value = "1">Restaurant Name</option>
-						<option value="2">Category</option>
-				</select>
-	
-				<input class="form-control" style = width:64% type="text" id="restaurantname" name="name" value="<%=keyword%>" placeholder="Restaurant Name"  required/>
-				<button style="background-color: #dd0808; width:5%;color: white;" class="form-control" type="submit" name="submit" ><i class=" fa fa-search"></i></button> 
+				<input class="form-control" style = width:32% type="text" id="restaurantname" name="name" placeholder="Restaurant Name"  required/> 
+		 		<input class="form-control" style = width:32% type="text" id="location" name="location" placeholder="Location"  required/> 
+		 		<button style="background-color: #dd0808; width:5%;color: white;" class="form-control" type="submit" name="submit" ><i class=" fa fa-search"></i></button> 
 		 		<div class="form-check ml-4">
-			 		 <input class="form-check-input" type="radio" name="searchtype" value="price" id="price" required/> 	  
-					 <label class="form-check-label" for="price">  Price </label>
+		 		
+			 		 <input class="form-check-input" type="radio" name="searchtype" value="rating" id="rating" required/> 	  
+					 <label class="form-check-label" for="price">  Rating</label>
 				</div>
 				<div class="form-check ml-4">
-					 <input class="form-check-input" type="radio" name="searchtype" value="review_count" id="rating" required/> 
+					 <input class="form-check-input" type="radio" name="searchtype" value="review_count" id="review_count" required/> 
 					 <label class="form-check-label" for="rating">  Review Count </label>
 				</div>	
 				<div class="form-check ml-4">	 
-				 	 <input class="form-check-input" type="radio" name="searchtype" value="rating" id="count" required/> 
-					 <label class="form-check-label" for="count">  Rating </label>
+				 	 <input class="form-check-input" type="radio" name="searchtype" value="distance" id="distance" required/> 
+					 <label class="form-check-label" for="count">  Distance </label>
 				</div>			
-				
+				<div class="form-check ml-4">	 
+				 	 <input class="form-check-input" type="radio" name="searchtype" value="best_match" id="best_match" required/> 
+					 <label class="form-check-label" for="count">  Best Match </label>
+				</div>	
+			</div>				
 			 	
-			</div>
+			 	
 		 </form>
 
 		 <br>
 		 <div class="row my-3">
-		 <h5 style ="color: #AFAFAF;">Results for "<%= keyword %>" in <%=searchtype %> sorted by <%=sortby %></h5>
+		 <h5 style ="color: #AFAFAF;">Results for "<%= keyword %>" sorted by <%=sortby %></h5>
 		 </div>
 		  <div class="row my-3">
 		 <hr size="1" width="100%" style="color: #af0606; margin-top: 0px" />
@@ -151,6 +159,7 @@
 		
 				
 				</p>
+				<p>Address: ${restaurant.getDisplayAddress()}</p>
 		
 				<a style="color:#dd0808;" href="${restaurant.getUrl()}">Yelp Link</a>
 			

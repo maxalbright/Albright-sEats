@@ -19,7 +19,7 @@ import Util.Constant;
 public class RegisterDispatcher extends HttpServlet {
     @Serial
     private static final long serialVersionUID = 1L;
-    private static final String url = "jdbc:mysql://localhost:3306/PA4Users";
+   
 
     /**
      * Default constructor.

@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
 	<script type='text/javascript' src='config.js'></script>
     <title>Login / Register</title>
-	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap" rel="stylesheet">
     <link href="index.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -96,14 +96,14 @@
 
 <% if (iserror.contentEquals("false")) { %>
 		<div style="position: absolute; top: 23px; right: 100px;">
-			<a href="index.jsp" style=" color: #AFAFAF; margin-top: 15px; font-size: 20px;">Home </a>
-			<a href="auth.jsp"  style=" color: #AFAFAF ; margin-top: 15px; margin-left: 15px; font-size: 20px;">Login / Register</a>	
+			<a href="index.jsp" style=" color: black; margin-top: 15px; font-size: 20px;">Home </a>
+			<a href="auth.jsp"  style=" color: black ; margin-top: 15px; margin-left: 15px; font-size: 20px;">Login / Register</a>	
 		</div>
 		<div style = "position: absolute; top: 14px; left: 80px;">       
-			<a href="index.jsp"   style="font-family: Lobster, cursive;margin-top: 15px;  color: #dd0808; font-size:33px;">SalEats! </a>
+			<a href="index.jsp"   style="font-family: Beau Rivage, cursive;margin-top: 15px;  color: #dd0808; font-size:38px;">Albright's Eats </a>
 		</div>
 	
-		<hr size="1" width="100%" style="color: #af0606; margin-top: 80px" />	
+		<hr  style="height: 2px; background-color: red; margin-top: 80px" />
 
 
 
@@ -112,14 +112,14 @@
 			<c:out value = "<%=error_message%>" />
 		</div>
 		<div style="position: absolute; top: 70px; right: 100px;">
-			<a href="index.jsp" style=" color: #AFAFAF; margin-top: 15px; font-size: 20px;">Home </a>
-			<a href="auth.jsp"  style=" color: #AFAFAF ; margin-top: 15px; margin-left: 15px; font-size: 20px;">Login / Register</a>	
+			<a href="index.jsp" style=" color: black; margin-top: 15px; font-size: 20px;">Home </a>
+			<a href="auth.jsp"  style=" color: black ; margin-top: 15px; margin-left: 15px; font-size: 20px;">Login / Register</a>	
 		</div>
 		<div style = "position: absolute; top: 61px; left: 80px;">       
-			<a href="index.jsp"   style="font-family: Lobster, cursive;margin-top: 15px;  color: #af0606; font-size:33px;">SalEats! </a>
+			<a href="index.jsp"   style="font-family: Beau Rivage, cursive;margin-top: 15px;  color: #af0606; font-size:33px;">Albright's Eats </a>
 		</div>
 	
-		<hr size="1" width="100%" style="color: #af0606; margin-top: 80px" />	
+		<hr  style="height: 2px; background-color: red; margin-top: 80px" />
 
 <% } %>	
 

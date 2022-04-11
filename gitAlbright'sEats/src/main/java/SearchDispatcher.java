@@ -16,6 +16,7 @@ import java.io.InputStream;
 import java.io.Serial;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.io.*;
 /**
@@ -33,26 +34,7 @@ public class SearchDispatcher extends HttpServlet {
     public SearchDispatcher() {
     }
 
-    @Override
-    public void init(ServletConfig config) throws ServletException {
-        super.init(config);
-        ServletContext servletContext = getServletContext();
-        // get json file as stream, Initialize RestaurantDataParser by calling its initalize
-        // method
-        
-        InputStream inputstream = RestaurantDataParser.class.getClassLoader().getResourceAsStream("/restaurant_data.json");
-        String text = "";
-		try {
-			text = new String(inputstream.readAllBytes(), StandardCharsets.UTF_8);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-        
-    	
-        RestaurantDataParser.Init(text);
-    	
-        
-    }
+
 
     /**
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
@@ -61,26 +43,20 @@ public class SearchDispatcher extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
     	
-    	String searchingbyRN = "";
-    	if (request.getParameter("Rn_or_Cat").contentEquals("1")) {
-    		searchingbyRN = "restaurant name";
-    	} else searchingbyRN = "category";
+    	String sloc = request.getParameter("location"); 
     	String sname = request.getParameter("name");
     	String sortby = request.getParameter("searchtype");
-    	if (sortby.contentEquals("review_count")) {
-    		sortby = "review count";
-    	}
+    	
+
     	
     	
-    	ArrayList<Util.Business> allBusinesses = RestaurantDataParser.getBusinesses(sname, sortby, searchingbyRN);
+    	
+    	List<Util.Business> allBusinesses = RestaurantDataParser.searchRestaurants(sname, sloc, sortby);
     	request.setAttribute("data", allBusinesses);
     	request.setAttribute("keyword", sname);
     	request.setAttribute("sortby", sortby);
-    	request.setAttribute("searchtype", searchingbyRN);
-    	
-    	
+
     	request.getRequestDispatcher("search.jsp").forward(request, response);
 
     }

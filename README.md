@@ -4,9 +4,7 @@ Utilizes Yelp API to provide a search engine for restaurants near any given loca
 ## Demonstration Video: 
 https://drive.google.com/file/d/1rbYhoUk3tzXRsQAmSzQvwqjc4Dej8ubF/view?usp=sharing
 
-<a href="https://drive.google.com/file/d/1rbYhoUk3tzXRsQAmSzQvwqjc4Dej8ubF/view?usp=sharing
-" target="_blank"><img src="https://user-images.githubusercontent.com/70349082/162670659-b1412801-a31d-405a-a027-865679706cdb.png" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
 
 <img width="1777" alt="indexss" src="https://user-images.githubusercontent.com/70349082/162670659-b1412801-a31d-405a-a027-865679706cdb.png">
 <img width="1710" alt="searchss" src="https://user-images.githubusercontent.com/70349082/162670699-47d95256-05b4-4d31-818b-139c31c8bb9a.png">

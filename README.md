@@ -1,10 +1,10 @@
 # Albright's Eats
 Utilizes Yelp API to provide a search engine for restaurants near a given location
 
-Demonstration Video: 
+##Demonstration Video: 
 https://drive.google.com/file/d/1rbYhoUk3tzXRsQAmSzQvwqjc4Dej8ubF/view?usp=sharing
 
-Tech Stack:  
+###Tech Stack:  
 Java 14   
 HTML  
 CSS  
@@ -18,24 +18,22 @@ OkHttp v4.8.0
 
 
 
-To Create Database:
+###To Create Database:
 - open "createDatabase.sql" in mySQLWorkbench and run it
 - or right click on it in eclipse, and select "Open with SQL File Editor", then copy and paste it into workbench and run it
 
 
-Make sure that when you open the project you have a Tomcat v9.0 server to use and that it is bound.
-To bind the server, right-click the project name, click properties, click Libraries, click Server runtime, and if Tomcat isn't bound, doubleclick it and bind it. 
-
-
-
-Run the code by running index.jsp in eclipse.
-
+###Deployment
+- Make sure that when you open the project you have a Tomcat v9.0 server to use and that it is bound.
+- To bind the server, right-click the project name, click properties, click Libraries, click Server runtime, and if Tomcat isn't bound, doubleclick it and bind it. 
+- Run the code by running index.jsp in eclipse.
 
 
 
 
-Client ID
+
+Client ID for Yelp API
 YWWDqwccD6MIYqsqt4qv3Q
 
-API Key
+API Key for Yelp API
 2RWbycKHLQ0LlnRD2POew2OQKTDsz5aEnsvKEvibSfzwsiVEvcUFalrt_QEFWn86GIyRKROj78KIq2DsiwpN7tVJhuzIFBjifjL_9WE22cWSTcdD3sYY2FW0U7pMYnYx

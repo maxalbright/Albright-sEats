@@ -1,7 +1,7 @@
 # Albright's Eats
 Utilizes Yelp API to provide a search engine for restaurants near a given location
 
-##Demonstration Video: 
+## Demonstration Video: 
 https://drive.google.com/file/d/1rbYhoUk3tzXRsQAmSzQvwqjc4Dej8ubF/view?usp=sharing
 
 ### Tech Stack:  

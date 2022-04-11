@@ -1,4 +1,4 @@
-# Albright's Cuisine
+# Albright's Eats
 Utilizes Yelp API to provide a search engine for restaurants near a given location
 
 Demonstration Video: 

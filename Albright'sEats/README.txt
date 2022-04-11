@@ -5,6 +5,21 @@ Demonstration Video:
 https://drive.google.com/file/d/1aHxe3S_4XcNtChycDttElzC7M0KMHF8A/view?usp=sharing
 
 
+
+Tech Stack:
+Java 14
+HTML
+CSS
+Javascript
+Apache Tomcat v9.0.8
+MySQL v8
+JDBC v8
+JSTL v2
+Gson v2.8.6
+OkHttp v4.8.0
+
+
+
 To Create Database:
 - open "createDatabase.sql" in mySQLWorkbench and run it
 - or right click on it in eclipse, and select "Open with SQL File Editor", then copy and paste it into workbench and run it

@@ -4,17 +4,17 @@ Utilizes Yelp API to provide a search engine for restaurants near a given locati
 Demonstration Video: 
 https://drive.google.com/file/d/1rbYhoUk3tzXRsQAmSzQvwqjc4Dej8ubF/view?usp=sharing
 
-Tech Stack:
-Java 14
-HTML
-CSS
-Javascript
-Apache Tomcat v9.0.8
-MySQL v8
-JDBC v8
-JSTL v2
-Gson v2.8.6
-OkHttp v4.8.0
+Tech Stack:  
+Java 14   
+HTML  
+CSS  
+Javascript  
+Apache Tomcat v9.0.8  
+MySQL v8  
+JDBC v8  
+JSTL v2  
+Gson v2.8.6  
+OkHttp v4.8.0  
 
 
 

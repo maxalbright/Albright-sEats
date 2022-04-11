@@ -25,7 +25,7 @@ OkHttp v4.8.0
 
 ### To Create Database:
 - open "createDatabase.sql" in mySQLWorkbench and run it
-- or right click on it in eclipse, and select "Open with SQL File Editor", then copy and paste it into workbench and run it
+- or right click on it in Eclipse, and select "Open with SQL File Editor", then copy and paste it into workbench and run it
 
 
 ### Deployment:

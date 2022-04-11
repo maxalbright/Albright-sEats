@@ -26,7 +26,6 @@ To Create Database:
 Make sure that when you open the project you have a Tomcat v9.0 server to use and that it is bound.
 To bind the server, right-click the project name, click properties, click Libraries, click Server runtime, and if Tomcat isn't bound, doubleclick it and bind it. 
 
-There may be a weird bug in Eclipse where it says there is an error in index.jsp, but if you run it, it works anyway.
 
 
 Run the code by running index.jsp in eclipse.

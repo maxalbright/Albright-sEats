@@ -10,7 +10,7 @@ https://drive.google.com/file/d/1rbYhoUk3tzXRsQAmSzQvwqjc4Dej8ubF/view?usp=shari
 <img width="1710" alt="searchss" src="https://user-images.githubusercontent.com/70349082/162670699-47d95256-05b4-4d31-818b-139c31c8bb9a.png">
 <img width="1790" alt="rloginss" src="https://user-images.githubusercontent.com/70349082/162671380-7c857316-ef60-4738-a959-4b8bea9dc0aa.png">
 
-
+<hr>
 ### Tech Stack:  
 Java 14   
 HTML  

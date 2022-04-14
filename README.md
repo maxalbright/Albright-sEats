@@ -41,8 +41,8 @@ OkHttp v4.8.0
 
 
 
-Client ID for Yelp API: <br>
+#### Client ID for Yelp API: <br>
 YWWDqwccD6MIYqsqt4qv3Q
 
-API Key for Yelp API: <br>
+#### API Key for Yelp API: <br>
 2RWbycKHLQ0LlnRD2POew2OQKTDsz5aEnsvKEvibSfzwsiVEvcUFalrt_QEFWn86GIyRKROj78KIq2DsiwpN7tVJhuzIFBjifjL_9WE22cWSTcdD3sYY2FW0U7pMYnYx
